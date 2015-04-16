@@ -1,5 +1,6 @@
 package test;
 
+import console.InputConsole;
 import console.OutputConsole;
 import functional.MatrixInt;
 
@@ -21,7 +22,7 @@ public class TestMatrixInt {
 		System.out.println("Probar la suma de matrices con dos matrices del mismo tamaño");
 		int[][] matA, matB, matC;
 		matA = MatrixInt.generate(2,3);
-		matB = MatrixInt.generate(4,3);
+		matB = MatrixInt.generate(2,3);
 		matC = MatrixInt.sum(matA, matB);
 		OutputConsole.print(matA);
 		System.out.println(" + ");
@@ -29,5 +30,4 @@ public class TestMatrixInt {
 		System.out.println("=");
 		OutputConsole.print(matC);
 	}
-
 }

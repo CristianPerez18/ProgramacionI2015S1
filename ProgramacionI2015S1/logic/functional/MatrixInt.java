@@ -31,7 +31,7 @@ public class MatrixInt {
 		this.columns = columns;
 		this.array = new int[rows][columns];
 	}
-	//-------------------- Implementación de operaciones o metodos 
+	//-------------------- Implementación de operaciones o metodos	
 	/**
 	 * <font color="#ff0000">Generar una matriz con los datos en cada celda
 	 * automáticamente de acuerdo a una dimensión establecida</font>
@@ -47,6 +47,14 @@ public class MatrixInt {
 			}
 		}
 		return matrix;
+	}
+	/**
+	 * <font color="#ff0000">Generar en la matriz datos en cada celda
+	 * automáticamente de acuerdo a la dimensión que se tiene</font>
+	 * 
+	 */
+	public void generate(){
+		this.array = generate(this.rows, this.columns);
 	}
 
 	/**
