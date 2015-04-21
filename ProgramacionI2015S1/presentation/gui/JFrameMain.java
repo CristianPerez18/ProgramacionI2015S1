@@ -17,8 +17,9 @@ public class JFrameMain extends JFrame{
 	private JButton jButtonMatrixA;
 	private JButton jButtonMatrixB;
 	private JButton jButtonSum;
+	private Event event;
 	
-	public JFrameMain() {
+	public JFrameMain() {		
 		setTitle("SUMA DE MATRICES");
 		setSize(400, 200);
 		setLocationRelativeTo(null);
@@ -30,6 +31,7 @@ public class JFrameMain extends JFrame{
 	 * Construir los atributos y asignarles la funcionalidad conrrespondiente
 	 */
 	public void init(){
+		event = new Event();
 		jLabelRows = new JLabel("Filas");
 		add(jLabelRows);
 		jTextFieldRows = new JTextField();
@@ -39,10 +41,16 @@ public class JFrameMain extends JFrame{
 		jTextFieldColumns = new JTextField();
 		add(jTextFieldColumns);	
 		jButtonMatrixA = new JButton("Matriz A");
+		jButtonMatrixA.addActionListener(event);
+		jButtonMatrixA.setActionCommand(Event.WINDOW_MATRIX_A);
 		add(jButtonMatrixA);
 		jButtonMatrixB = new JButton("Matriz B");
+		jButtonMatrixB.addActionListener(event);
+		jButtonMatrixB.setActionCommand(Event.WINDOW_MATRIX_B);
 		add(jButtonMatrixB);
 		jButtonSum = new JButton("Sumar");
+		jButtonSum.addActionListener(event);
+		jButtonSum.setActionCommand(Event.WINDOW_MATRIX_SUM);
 		add(jButtonSum);
 	}
 	
